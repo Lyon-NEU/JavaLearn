@@ -60,4 +60,9 @@ public class Trie {
         }
         return node.isEnd;
     }
+    public static void main(String[]args){
+    	Trie t=new Trie();
+    	t.insert("java");
+    	System.out.println(t.has("ja"));
+    }
 }

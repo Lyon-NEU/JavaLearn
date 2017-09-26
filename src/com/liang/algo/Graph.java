@@ -14,8 +14,8 @@ import java.util.LinkedList;
  */
 class Vertex{
 	private int value;
-	public Vertex(){
-		
+	public Vertex(int v){
+		this.value=v;
 	}
 	public void setValue(int value){
 		this.value=value;
@@ -47,6 +47,13 @@ public class Graph {
 	private int edges[][]=new int[MAXVEX][MAXVEX];
 	private Vertex []vexs=new Vertex[MAXVEX];
 	private boolean [] visited = new boolean[MAXVEX];
+	public Graph(int vex,int edge){
+		this.edge_num=edge;
+		this.vex_num=vex;
+		for (int i=0;i<vex_num;i++){
+			vexs[i]=new Vertex(i);
+		}
+	}
 	public void DFS(Graph graph,int i){
 		visited[i]=true;
 		System.out.println(graph.vexs[i]);

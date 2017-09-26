@@ -5,3 +5,6 @@
 JavaLearn.iml
 bin/
 out/
+*.index
+*.zip
+java_pid*
